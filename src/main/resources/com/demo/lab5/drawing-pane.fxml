@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox prefHeight="321.0" prefWidth="470.0" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.demo.lab5.DrawingPaneController">
+    <children>
+      <StackPane>
+         <children>
+            <Pane fx:id="drawingBox" onMouseDragged="#onMouseDragged" onMousePressed="#onMousePressed" prefHeight="414.0" prefWidth="470.0" />
+            <VBox maxHeight="-Infinity" prefHeight="70.0" StackPane.alignment="TOP_CENTER">
+               <children>
+                  <MenuBar prefHeight="30.0" VBox.vgrow="NEVER">
+                    <menus>
+                      <Menu mnemonicParsing="false" text="File">
+                        <items>
+                          <MenuItem mnemonicParsing="false" onAction="#onOpen" text="Open" />
+                              <MenuItem mnemonicParsing="false" onAction="#onSave" text="Save" />
+                              <MenuItem mnemonicParsing="false" onAction="#onClose" text="Close" />
+                        </items>
+                      </Menu>
+                      <Menu mnemonicParsing="false" text="Help">
+                        <items>
+                              <MenuItem mnemonicParsing="false" onAction="#onInstructionClicked" text="Instruction" />
+                          <MenuItem mnemonicParsing="false" onAction="#onInfoClicked" text="Info" />
+                        </items>
+                      </Menu>
+                    </menus>
+                  </MenuBar>
+                  <ToolBar prefHeight="40.0" VBox.vgrow="NEVER">
+                    <items>
+                      <Button fx:id="selectModeButton" mnemonicParsing="false" onAction="#onModeSelect" text="Select" />
+                        <Button fx:id="circleButton" mnemonicParsing="false" onAction="#onModeSelect" text="Circle" />
+                        <Button fx:id="rectangleButton" mnemonicParsing="false" onAction="#onModeSelect" text="Rectangle" />
+                        <Button fx:id="polygonButton" mnemonicParsing="false" onAction="#onModeSelect" text="Polygon" />
+                        <Button fx:id="polygonButton1" layoutX="196.0" layoutY="12.0" mnemonicParsing="false" onAction="#onClear" text="Clear" />
+                    </items>
+                     <opaqueInsets>
+                        <Insets />
+                     </opaqueInsets>
+                  </ToolBar>
+               </children>
+            </VBox>
+         </children>
+      </StackPane>
+   </children>
+</VBox>
